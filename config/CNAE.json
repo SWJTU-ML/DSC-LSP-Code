@@ -1,0 +1,48 @@
+{
+    "dataset": "CNAE",
+    "n_clusters": 9,
+    "is_sparse_graph": false,
+    "should_use_ae": true, 
+    "should_use_siamese": false,
+    "should_check_generalization": false,
+    "ae": {
+        "architecture": {    
+            "hidden_dim1": 512,
+            "hidden_dim2": 512,
+            "hidden_dim3": 2048,
+            "output_dim": 9
+        },
+        "epochs": 30,
+        "n_samples": 1080,
+        "lr": 1e-3,
+        "lr_decay": 0.1,
+        "min_lr": 1e-7,
+        "patience": 5,
+        "batch_size": 32
+    },
+    "spectral": {
+        "architecture": {
+            "n_layers": 5,
+            "hidden_dim1": 1024,
+            "hidden_dim2":512,
+            "hidden_dim3":128,
+            "output_dim": 9
+        },
+        "epochs": 15,
+        "lr": 1e-4,
+        "lr_decay": 0.1,
+        "min_lr": 1e-8,
+        "batch_size": 8,
+        "n_neighbors": 30,
+        "scale_k": 15,
+        "is_local_scale": true,
+        "n_clusters": 9,
+        "patience": 5,
+        "batch_k":4,
+        "center_k":5,
+        "batch_ck":7,
+        "LE_k":7,
+        "lamda":10,
+        "sigma":0.2
+    }
+}
